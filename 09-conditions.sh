@@ -7,7 +7,7 @@ Number=$1
 #-- -eq -- equals to
 #-- -ne -- not equals to
 
-if ($Number -gt 10)
+if [$Number -gt 10]
 then
    echo "given number $Number is greater than 10"
 else

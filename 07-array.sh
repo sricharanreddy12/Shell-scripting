@@ -2,4 +2,4 @@
 
 Movies=("Spiderman" "Coolie" "Legend" "Dragon")
 
-echo "first Movie;$Movies[0]"
+echo "first Movie;${Movies[0]}"

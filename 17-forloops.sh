@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[37m" #"\e[0m" ---also used for white
-PACKAGES=( Mysql Nodejs httpd Git)
+PACKAGES=("mysql" "httpd" "python")
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
@@ -33,7 +33,7 @@ else
  fi   
 }
 
-for package in {$PACKAGES{@}}
+for package in ${PACKAGES{@}}
 do
   dnf list installed $package &>>$LOG_FILE
 

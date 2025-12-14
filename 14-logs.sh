@@ -36,11 +36,11 @@ dnf list installed mysql &>>$LOG_FILE
 
 if [ $? -ne 0 ]
 then
-    echo -e "Mysql is not installed... $G going to install $N"
+    echo -e "Mysql is not installed... $G going to install $N" &>>$LOG_FILE
     dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "Mysql"
 else
-    echo -e " $Y Mysql was already installed nothing to do $N"
+    echo -e " $Y Mysql was already installed nothing to do $N" &>>$LOG_FILE
 fi
 
 dnf list installed python3 &>>$LOG_FILE
